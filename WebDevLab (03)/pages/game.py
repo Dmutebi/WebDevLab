@@ -3,14 +3,11 @@ import streamlit as st
 st.title("Which Jedi Master Are You?")
 st.write("Simply answer a couple of questions and see if you truly are one with the Force.")
 
-# --- Add at least 3 images to satisfy the spec (you can swap with URLs) ---
-st.image(["images/temple.jpg", "images/lightsabers.jpg", "images/starfield.jpg"],
-         caption=["Jedi Temple", "Lightsabers", "A galaxy far, far away..."])  # NEW
+st.image(["images/JediTemple-Deceived.webp", "images/Many_Lightsabers.jpg", "images/MainGalaxy.webp"],
+         caption=["Jedi Temple", "Lightsabers", "Galaxy"]) 
 
-# -------------------------
-# QUESTIONS (5+ and 3+ types)
-# -------------------------
-combat = st.radio(  # NEW
+
+form = st.radio(  
     "Choose your lightsaber form",
     [
         "Soresu (defense & patience)",
@@ -20,25 +17,23 @@ combat = st.radio(  # NEW
     ],
 )
 
-role = st.selectbox(  # NEW
+role = st.selectbox(  
     "Which role suits you best?",
     ["Teacher", "Diplomat/Mediator", "Guardian/Warrior", "Independent Pathfinder"],
 )
 
-values = st.multiselect(  # NEW
+values = st.multiselect(  
     "What do you hold most dear to you?",
     ["Compassion", "Discipline", "Curiosity", "Tradition",
      "Independence", "Non-attachment", "Courage", "Humility"],
 )
 
-patience = st.slider("Your patience level", 0, 10, 5)  # NEW
-meditate = st.number_input("Hours you meditate per week", min_value=0, max_value=40, value=2)  # NEW
+patience = st.slider("Your patience level", 0, 10, 5)  
+meditate = st.number_input("Hours you meditate per week", min_value=0, max_value=40, value=2) 
 rules = st.radio("When the Council sets a rule, you usually…",
                  ["Follow it", "Bend it when needed", "Break it to follow the Living Force"])
 
-# -------------------------
-# SCORING
-# -------------------------
+
 scores = {
     "Yoda": 0,
     "Obi-Wan Kenobi": 0,
@@ -47,22 +42,21 @@ scores = {
     "Anakin Skywalker 😈": 0,
 }
 
-# combat
-if combat.startswith("Soresu"):
+
+if form.startswith("Soresu"):
     scores["Obi-Wan Kenobi"] += 2; scores["Yoda"] += 1
-elif combat.startswith("Ataru"):
+elif form.startswith("Ataru"):
     scores["Yoda"] += 2; scores["Anakin Skywalker 😈"] += 2
-elif combat.startswith("Vaapad"):
+elif form.startswith("Vaapad"):
     scores["Mace Windu"] += 3
-elif combat.startswith("Niman"):
+elif form.startswith("Niman"):
     scores["Qui-Gon Jinn"] += 2; scores["Anakin Skywalker 😈"] += 1
 
-# patience
 scores["Obi-Wan Kenobi"] += patience // 3
 scores["Yoda"] += patience // 2
 scores["Anakin Skywalker 😈"] += max(0, 3 - patience // 3)
 
-# role
+
 if role == "Teacher":
     scores["Yoda"] += 1; scores["Obi-Wan Kenobi"] += 2
 elif role == "Diplomat/Mediator":
@@ -72,7 +66,7 @@ elif role == "Guardian/Warrior":
 elif role == "Independent Pathfinder":
     scores["Anakin Skywalker 😈"] += 2; scores["Qui-Gon Jinn"] += 1
 
-# values
+
 for i in values:
     if i == "Compassion": scores["Yoda"] += 1; scores["Obi-Wan Kenobi"] += 1
     if i == "Discipline": scores["Obi-Wan Kenobi"] += 2
@@ -83,7 +77,7 @@ for i in values:
     if i == "Courage": scores["Mace Windu"] += 2; scores["Anakin Skywalker 😈"] += 1
     if i == "Humility": scores["Yoda"] += 2
 
-# meditate
+
 if meditate >= 10:
     scores["Yoda"] += 2; scores["Obi-Wan Kenobi"] += 1
 elif meditate >= 4:
@@ -91,7 +85,7 @@ elif meditate >= 4:
 else:
     scores["Anakin Skywalker 😈"] += 1
 
-# rules
+
 if rules == "Follow it":
     scores["Obi-Wan Kenobi"] += 2; scores["Mace Windu"] += 1
 elif rules == "Bend it when needed":
@@ -100,8 +94,8 @@ elif rules == "Break it to follow the Living Force":
     scores["Anakin Skywalker 😈"] += 2; scores["Qui-Gon Jinn"] += 1
 
 
-if st.button("Reveal my Jedi Master ✨"):  # NEW
-    prog = st.progress(0)  # NEW
+if st.button("Reveal my Jedi Master ✨"):  
+    prog = st.progress(0)  
     for j in range(0, 101, 10):
         prog.progress(j)
 
@@ -109,7 +103,7 @@ if st.button("Reveal my Jedi Master ✨"):  # NEW
     top_score = scores[best]
     ties = [k for k, i in scores.items() if i == top_score]
 
-    st.metric("Midichlorian Alignment Score", int(top_score))  # NEW
+    st.metric("Midichlorian Alignment Score", int(top_score)) 
 
     result_images = {
         "Yoda": "images/yoda.jpg",
@@ -131,11 +125,11 @@ if st.button("Reveal my Jedi Master ✨"):  # NEW
     else:
         st.subheader(f"🌟 You are most like **{best}**!")
         blurbs = {
-            "Yoda": "Ancient wisdom, deep patience, and a knack for teaching. Size matters not.",
+            "Yoda": "Space buddha. Indeed size matters not.",
             "Obi-Wan Kenobi": "Calm, disciplined, and loyal. You are the very model of Jedi serenity.",
             "Mace Windu": "Unflinching courage and principled strength. You face darkness without fear.",
             "Qui-Gon Jinn": "You follow the Living Force and your conscience—even when it breaks with tradition.",
-            "Anakin Skywalker 😈": "Passionate, powerful, and fearless… but beware: your fire can burn too hot.",
+            "Anakin Skywalker 😈": "Not quite on the council ;) but passionate, powerful, and fearless. Beware old people with cloaks :) .",
             "Sith Lord": "The Dark Side has consumed you. Power, anger, and ambition fuel your path.",
         }
         st.write(blurbs.get(best, "The Force moves in mysterious ways."))
