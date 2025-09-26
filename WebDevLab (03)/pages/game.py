@@ -73,15 +73,15 @@ elif role == "Independent Pathfinder":
     scores["Anakin Skywalker 😈"] += 2; scores["Qui-Gon Jinn"] += 1
 
 # values
-for v in values:
-    if v == "Compassion": scores["Yoda"] += 1; scores["Obi-Wan Kenobi"] += 1
-    if v == "Discipline": scores["Obi-Wan Kenobi"] += 2
-    if v == "Curiosity": scores["Qui-Gon Jinn"] += 2
-    if v == "Tradition": scores["Yoda"] += 1; scores["Mace Windu"] += 1
-    if v == "Independence": scores["Anakin Skywalker 😈"] += 2
-    if v == "Non-attachment": scores["Qui-Gon Jinn"] += 1; scores["Yoda"] += 1
-    if v == "Courage": scores["Mace Windu"] += 2; scores["Anakin Skywalker 😈"] += 1
-    if v == "Humility": scores["Yoda"] += 2
+for i in values:
+    if i == "Compassion": scores["Yoda"] += 1; scores["Obi-Wan Kenobi"] += 1
+    if i == "Discipline": scores["Obi-Wan Kenobi"] += 2
+    if i == "Curiosity": scores["Qui-Gon Jinn"] += 2
+    if i == "Tradition": scores["Yoda"] += 1; scores["Mace Windu"] += 1
+    if i == "Independence": scores["Anakin Skywalker 😈"] += 2
+    if i == "Non-attachment": scores["Qui-Gon Jinn"] += 1; scores["Yoda"] += 1
+    if i == "Courage": scores["Mace Windu"] += 2; scores["Anakin Skywalker 😈"] += 1
+    if i == "Humility": scores["Yoda"] += 2
 
 # meditate
 if meditate >= 10:
@@ -102,12 +102,12 @@ elif rules == "Break it to follow the Living Force":
 
 if st.button("Reveal my Jedi Master ✨"):  # NEW
     prog = st.progress(0)  # NEW
-    for i in range(0, 101, 10):
-        prog.progress(i)
+    for j in range(0, 101, 10):
+        prog.progress(j)
 
     best = max(scores, key=scores.get)
     top_score = scores[best]
-    ties = [k for k, v in scores.items() if v == top_score]
+    ties = [k for k, i in scores.items() if i == top_score]
 
     st.metric("Midichlorian Alignment Score", int(top_score))  # NEW
 
@@ -141,5 +141,5 @@ if st.button("Reveal my Jedi Master ✨"):  # NEW
         st.write(blurbs.get(best, "The Force moves in mysterious ways."))
         st.image(result_images.get(best, "images/jedi.jpg"))
 
-    st.balloons()  # NEW
+    st.balloons()  
 
