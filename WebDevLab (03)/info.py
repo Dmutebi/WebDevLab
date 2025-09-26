@@ -1,4 +1,4 @@
-profile_picture ="Photos/Screenshot 2025-06-26 200257"
+profile_picture ="images/Screenshot 2025-06-26 200257"
 about_me="I am Dembe Mutebi and I am a Chemistry major at Georgia Tech!"
 
 linkedin_image_url = "Photos/Screenshot 2025-06-27 234637"
