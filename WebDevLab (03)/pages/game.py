@@ -6,7 +6,6 @@ st.write("Simply answer a couple of questions and see if you truly are one with 
 st.image(["images/JediTemple-Deceived.webp", "images/Many_Lightsabers.jpg", "images/MainGalaxy.webp"],
          caption=["Jedi Temple", "Lightsabers", "Galaxy"]) 
 
-
 form = st.radio(  # NEW
     "Choose your lightsaber form",
     [
@@ -32,7 +31,13 @@ patience = st.slider("Your patience level", 0, 10, 5)
 meditate = st.number_input("Hours you meditate per week", min_value=0, max_value=40, value=2) 
 rules = st.radio("When the Council sets a rule, you usually…",
                  ["Follow it", "Bend it when needed", "Break it to follow the Living Force"])
-
+with st.expander("What do these lightsaber forms mean?"):
+    st.markdown("""
+- Soresu— econd "Jedi Philosophy" form, it has no dedicated attack moves and is purely meant to defend the practitioner 
+- Ataru — an acrobatic form that was another dedicated dueling form
+- Vaapad — eveloped by Mace Windu and was designed to use darker emotions.
+- Niman —  the third and final Philosophy form. this form took the basics of every form that came before it and used them all to create a generalized form("jack-of-all trades")
+""") # got from streamlit library
 
 scores = {
     "Yoda": 0,
@@ -41,7 +46,6 @@ scores = {
     "Qui-Gon Jinn": 0,
     "Anakin Skywalker 😈": 0,
 }
-
 
 if form.startswith("Soresu"):
     scores["Obi-Wan Kenobi"] += 2; scores["Yoda"] += 1
