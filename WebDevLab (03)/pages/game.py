@@ -101,7 +101,7 @@ if st.button("Reveal my Jedi Master ✨"):
 
     best = max(scores, key=scores.get)
     top_score = scores[best]
-    ties = [k for k, i in scores.items() if i == top_score]
+    ties = [k for k, i in scores.items() if i == top_score] # Citing How to pythonicly create a dictionary of highscores from a list of scores from stackoverflow link: "https://stackoverflow.com/questions/42704134/how-to-pythonicly-create-a-dictionary-of-highscores-from-a-list-of-scores"
 
     st.metric("Midichlorian Alignment Score", int(top_score)) 
 
