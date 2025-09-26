@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 import info
 
 def about_me_section():
