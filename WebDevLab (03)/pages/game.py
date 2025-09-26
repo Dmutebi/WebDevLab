@@ -7,7 +7,7 @@ st.image(["images/JediTemple-Deceived.webp", "images/Many_Lightsabers.jpg", "ima
          caption=["Jedi Temple", "Lightsabers", "Galaxy"]) 
 
 
-form = st.radio(  
+form = st.radio(  # NEW
     "Choose your lightsaber form",
     [
         "Soresu (defense & patience)",
@@ -17,7 +17,7 @@ form = st.radio(
     ],
 )
 
-role = st.selectbox(  
+role = st.selectbox(  # NEW
     "Which role suits you best?",
     ["Teacher", "Diplomat/Mediator", "Guardian/Warrior", "Independent Pathfinder"],
 )
@@ -73,8 +73,8 @@ for i in values:
     if i == "Curiosity": scores["Qui-Gon Jinn"] += 2
     if i == "Tradition": scores["Yoda"] += 1; scores["Mace Windu"] += 1
     if i == "Independence": scores["Anakin Skywalker 😈"] += 2
-    if i == "Non-attachment": scores["Qui-Gon Jinn"] += 1; scores["Yoda"] += 1
-    if i == "Courage": scores["Mace Windu"] += 2; scores["Anakin Skywalker 😈"] += 1
+    if i == "Non-attachment": scores["Qui-Gon Jinn"] += 1; scores["Yoda"] += 1; scores["Mace Windu"] += 1
+    if i == "Courage": scores["Obi-Wan Kenobi"] += 2; scores["Anakin Skywalker 😈"] += 1
     if i == "Humility": scores["Yoda"] += 2
 
 
@@ -114,7 +114,7 @@ if st.button("Reveal my Jedi Master ✨"):
         "Sith Lord": "images/Sith-Logo.png",
     }
 
-    # Sith fallback (too many ties or too low a score)
+    
     if len(ties) > 2 or top_score < 3:
         st.subheader("🌑 You have strayed too far… You are a **Sith Lord!** ⚡")
         st.image(result_images["Sith Lord"])
@@ -135,5 +135,5 @@ if st.button("Reveal my Jedi Master ✨"):
         st.write(blurbs.get(best, "The Force moves in mysterious ways."))
         st.image(result_images.get(best, "images/Jedi-order-crest-religious-symbol.webp.png"))
 
-    st.balloons()  
+    st.balloons()  # NEW
 
