@@ -135,7 +135,7 @@ if st.button("Reveal my Jedi Master ✨"):
             "Yoda": "Space buddha. Indeed size matters not.",
             "Obi-Wan Kenobi": "Hello There.",
             "Mace Windu": "You may not grant Anakin the rank of master, but you know how to take down an army of battle droids!",
-            "Qui-Gon Jinn": "You follow the Living Force and your conscience—even when it breaks with tradition.",
+            "Qui-Gon Jinn": "You follow the Living Force and you're the grandfather-elect of the Chosen One.",
             "Anakin Skywalker 😈": "Not quite on the council ;) but passionate, powerful, and fearless. Beware old people with cloaks :) .",
             "Sith Lord": "The Dark Side has consumed you. Power, anger, and ambition fuel your path.",
         }
