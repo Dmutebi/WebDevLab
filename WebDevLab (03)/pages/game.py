@@ -121,7 +121,14 @@ if st.button("Reveal my Jedi Master ✨"):
     elif len(ties) > 1:
         st.subheader("You embody multiple masters:")
         st.write(", ".join(ties))
-        st.image([result_images[t] for t in ties if t in result_images])
+        images_to_show = []
+        captions = []
+        for t in ties:
+            if t in result_images:
+                images_to_show.append(result_images[t])
+                captions.append(t)
+        if images_to_show:
+            st.image(images_to_show, caption=captions)
     else:
         st.subheader(f"🌟 You are most like **{best}**!")
         blurbs = {
