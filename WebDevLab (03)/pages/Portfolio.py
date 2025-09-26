@@ -89,4 +89,5 @@ def activities_section(leadership_data, activity_data):
             expander.image(image, width=250)
             for bullet in details:
                 expander.write(bullet)
+    st.write("---")
 activities_section(info.leadership_data, info.activity_data)
