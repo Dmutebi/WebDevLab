@@ -106,12 +106,12 @@ if st.button("Reveal my Jedi Master ✨"):
     st.metric("Midichlorian Alignment Score", int(top_score)) 
 
     result_images = {
-        "Yoda": "images/yoda.jpg",
-        "Obi-Wan Kenobi": "images/obiwan.jpg",
-        "Mace Windu": "images/mace.jpg",
-        "Qui-Gon Jinn": "images/qui-gon.jpg",
-        "Anakin Skywalker 😈": "images/anakin.jpg",
-        "Sith Lord": "images/sith.jpg",
+        "Yoda": "images/Yoda_Attack_of_the_Clones.png",
+        "Obi-Wan Kenobi": "images/ObiSWC.webp",
+        "Mace Windu": "images/Mace_Windu.webp",
+        "Qui-Gon Jinn": "images/Qui-Gon_Jinn.png",
+        "Anakin Skywalker 😈": "images/Anakin-Jedi.webp",
+        "Sith Lord": "images/Sith-Logo.png",
     }
 
     # Sith fallback (too many ties or too low a score)
@@ -126,14 +126,14 @@ if st.button("Reveal my Jedi Master ✨"):
         st.subheader(f"🌟 You are most like **{best}**!")
         blurbs = {
             "Yoda": "Space buddha. Indeed size matters not.",
-            "Obi-Wan Kenobi": "Calm, disciplined, and loyal. You are the very model of Jedi serenity.",
-            "Mace Windu": "Unflinching courage and principled strength. You face darkness without fear.",
+            "Obi-Wan Kenobi": "Hello There.",
+            "Mace Windu": "You may not grant Anakin the rank of master, but you know how to take down an army of battle droids!",
             "Qui-Gon Jinn": "You follow the Living Force and your conscience—even when it breaks with tradition.",
             "Anakin Skywalker 😈": "Not quite on the council ;) but passionate, powerful, and fearless. Beware old people with cloaks :) .",
             "Sith Lord": "The Dark Side has consumed you. Power, anger, and ambition fuel your path.",
         }
         st.write(blurbs.get(best, "The Force moves in mysterious ways."))
-        st.image(result_images.get(best, "images/jedi.jpg"))
+        st.image(result_images.get(best, "images/Jedi-order-crest-religious-symbol.webp.png"))
 
     st.balloons()  
 
