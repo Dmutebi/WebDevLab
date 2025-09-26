@@ -33,11 +33,11 @@ rules = st.radio("When the Council sets a rule, you usually…",
                  ["Follow it", "Bend it when needed", "Break it to follow the Living Force"])
 with st.expander("What do these lightsaber forms mean?"):
     st.markdown("""
-- Soresu— econd "Jedi Philosophy" form, it has no dedicated attack moves and is purely meant to defend the practitioner 
+- Soresu— second "Jedi Philosophy" form, it has no dedicated attack moves and is purely meant to defend the practitioner 
 - Ataru — an acrobatic form that was another dedicated dueling form
 - Vaapad — eveloped by Mace Windu and was designed to use darker emotions.
 - Niman —  the third and final Philosophy form. this form took the basics of every form that came before it and used them all to create a generalized form("jack-of-all trades")
-""") # got from streamlit library
+""") # got inspiration from streamlit library
 
 scores = {
     "Yoda": 0,
