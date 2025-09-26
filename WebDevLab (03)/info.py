@@ -1,7 +1,7 @@
-profile_picture ="images/Screenshot 2025-06-26 200257"
+profile_picture ="images/Screenshot 2025-06-26 200257.png"
 about_me="I am Dembe Mutebi and I am a Chemistry major at Georgia Tech!"
 
-linkedin_image_url = "images/Screenshot 2025-06-27 234637"
+linkedin_image_url = "images/Screenshot 2025-06-27 234637.png"
 my_linkedin_url = "https://www.linkedin.com/in/dembe-mutebi-775a3a22b/"
 
 my_github_url = "https://github.com/Dmutebi"
