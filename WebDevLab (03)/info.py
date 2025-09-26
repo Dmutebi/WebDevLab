@@ -5,10 +5,10 @@ linkedin_image_url = "Photos/Screenshot 2025-06-27 234637"
 my_linkedin_url = "https://www.linkedin.com/in/dembe-mutebi-775a3a22b/"
 
 my_github_url = "https://github.com/Dmutebi"
-github_image_url = "C:/Users/dembe/Downloads/New folder/Photos/Screenshot 2025-06-27 234817.png"
+github_image_url = "Photos/Screenshot 2025-06-27 234817.png"
 
 my_email_address = "dembe743.845@gmail.com"
-email_image_url = "C:/Users/dembe/Downloads/New folder/Photos/Screenshot 2025-06-27 234954.png"
+email_image_url = "Photos/Screenshot 2025-06-27 234954.png"
 
 education_data ={
     'Degree': 'Bachelor of Science in Chemistry',
@@ -33,8 +33,8 @@ course_data = [
 ]
 
 experience_data = {
-    "Supplemental Instructor": (["Helping students with their chem homework"],"C:/Users/dembe/Downloads/New folder/Photos/Screenshot 2025-06-27 233343.png"),
-    "Georgia Tech Roll Call Caller": (["Calling alumni to donate to Tech"], "C:/Users/dembe/Downloads/New folder/Photos/Screenshot 2025-06-27 233901.png"),
+    "Supplemental Instructor": (["Helping students with their chem homework"],"Photos/Screenshot 2025-06-27 233343.png"),
+    "Georgia Tech Roll Call Caller": (["Calling alumni to donate to Tech"], "Photos/Screenshot 2025-06-27 233901.png"),
 }
 projects_data = {
     "Coding miniproject": "Trying to model harmonic oscillation",
@@ -58,8 +58,8 @@ spoken_data = {
     "Chinese": "Intermediate",
 }
 leadership_data = {
-    "Member of GT MUN": (["Designated MUN delegate"], "C:/Users/dembe/Downloads/New folder/Photos/Screenshot 2025-06-27 233957.png")
+    "Member of GT MUN": (["Designated MUN delegate"], "Photos/Screenshot 2025-06-27 233957.png")
 }
 activity_data = {
-    "GTMUN":(["Debating Global Issues"], "C:/Users/dembe/Downloads/New folder/Photos/Screenshot 2025-06-27 233957.png")
+    "GTMUN":(["Debating Global Issues"], "Photos/Screenshot 2025-06-27 233957.png")
 }
