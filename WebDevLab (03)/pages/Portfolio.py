@@ -3,7 +3,7 @@ import info
 
 def about_me_section():
     st.header("About Me")
-    st.image("C:/Users/dembe/Downloads/New folder/Photos/Screenshot 2025-06-26 183807.png", width=200)
+    st.image(info.profile_picture, width=200)
     st.write(info.about_me)
     st.write('---')
 about_me_section()
@@ -25,9 +25,9 @@ links_section()
 
 def education_section(education_data, course_data):
     st.header("Education")
-    st.subheader(f"**{education_data['Institution']}**")
-    st.write(f"**Degree:** {education_data['Degree']}")
-    st.write(f"**Graduation Date:** {education_data['Graduation Date']}")
+    st.subheader(f"**{info.education_data['Institution']}**")
+    st.write(f"**Degree:** {info.education_data['Degree']}")
+    st.write(f"**Graduation Date:** {info.education_data['Graduation Date']}")
     st.write(f"**GPA:** {education_data['GPA']}")
     st.write("**Relevant Coursework:**")
     coursework = pd.DataFrame(course_data)
